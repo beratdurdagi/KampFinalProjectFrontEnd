@@ -1,0 +1,64 @@
+<div class="content">
+<div class="col-md-12">
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">Ürün ekle</h5>
+            </div>
+
+            <div class="card-body">
+                <form [formGroup]="productAddForm">
+                <div class="mb-3">
+                    <label for="productName" >Product Name</label>
+                    <div class="form-group">
+
+                        <input type="text" id="productName" formControlName="productName" class="form-control  "  placeholder="product name"/>
+
+                    </div>  
+                </div>
+                   
+                </form>
+                
+                <div class="mb-3">
+                    <label for="categoryId" >Category Id</label>
+                    <form [formGroup]="productAddForm">
+                        <div class="form-group">
+    
+                            <input type="number" id="categoryId" formControlName="categoryId" class="form-control "  placeholder="category id"/>
+    
+                        </div>
+                    </form>
+                </div>
+                
+            <div class="mb-3">
+                <label for="unitInStock" >Unit In Stock</label>
+                <form [formGroup]="productAddForm">
+                    <div class="form-group">
+
+                        <input type="number" id="unitInStock" formControlName="unitInStock" class="form-control "  placeholder="unit in stock"/>
+
+                    </div>
+                </form>
+            </div> 
+            
+            <div class="mb-3">
+                <label for="unitPrice" >Unit Price</label>
+                <form [formGroup]="productAddForm">
+                    <div class="form-group">
+
+                        <input type="number" id="unitPrice" formControlName="unitPrice" class="form-control "  placeholder="unit price"/>
+
+                    </div>
+                </form>
+            </div>
+            <div>
+                <input (click)="addProduct()" class="btn btn-primary" type="submit" value="Submit">
+            </div>
+            </div>
+           
+        </div>
+      
+   
+</div>
+
+</div>

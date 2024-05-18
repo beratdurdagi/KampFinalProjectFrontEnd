@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ProductList } from '../models/productList';
-import { Product } from '../models/product';
 import { Observable } from 'rxjs';
-import { CategoryList } from '../models/categoryList';
+import { Category } from '../models/category';
+import { ListResponseModel } from '../models/listResponseModel';
+
 
 
 @Injectable({
@@ -17,9 +17,9 @@ export class CategoryService {
 
 
 
-  getCategories() :Observable<CategoryList> {
+  getCategories() :Observable<ListResponseModel<Category>> {
 
-    return this.http.get<CategoryList>(this.apiUrl);
+    return this.http.get<ListResponseModel<Category>>(this.apiUrl);
   } 
 
 } 

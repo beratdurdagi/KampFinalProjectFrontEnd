@@ -1,3 +1,5 @@
 <ul class="list-group">
-    <li *ngFor="let category of response.data; trackBy: trackById" class="list-group-item">{{category.categoryName}}</li>
+    <li (click) = "setCurrentCategory(category)"
+    routerLink="/products/category/{{category.categoryId}}" *ngFor="let category of categories"
+     [class]="getCurrentCategoryClass(category)">{{category.categoryName}}</li>
 </ul>
